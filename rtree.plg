@@ -1,0 +1,79 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: rtree - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\obobbyo\LOCALS~1\Temp\RSP564.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Release/" /Fp"Release/rtree.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\obobbyo\LOCALS~1\Temp\RSP564.tmp" 
+Creating temporary file "C:\DOCUME~1\obobbyo\LOCALS~1\Temp\RSP565.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:no /pdb:"Release/rtree.pdb" /machine:I386 /out:"Release/rtree.exe" 
+".\Release\blk_file.obj"
+".\Release\cache.obj"
+".\Release\distance.obj"
+".\Release\entry.obj"
+".\Release\functions.obj"
+".\Release\heap.obj"
+".\Release\histogram.obj"
+".\Release\linlist.obj"
+".\Release\main.obj"
+".\Release\rtnode.obj"
+".\Release\rtree.obj"
+".\Release\rtree_cmd.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\obobbyo\LOCALS~1\Temp\RSP565.tmp"
+<h3>Output Window</h3>
+Compiling...
+main.cpp
+C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp(84) : warning C4305: '=' : truncation from 'const double' to 'float'
+C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp(85) : warning C4305: '=' : truncation from 'const double' to 'float'
+C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp(141) : warning C4101: 'o2' : unreferenced local variable
+C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp(141) : warning C4101: 'o3' : unreferenced local variable
+C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp(666) : warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp(873) : warning C4305: 'initializing' : truncation from 'const double' to 'float'
+C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp(971) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp(1090) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp(1091) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp(1092) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp(1094) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp(1102) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp(1103) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp(1104) : warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp(1106) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp(1201) : warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp(1254) : warning C4305: 'initializing' : truncation from 'const double' to 'float'
+C:\Documents and Settings\obobbyo\My Documents\Database\Validity\ValidityRegion\main.cpp(1258) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+Linking...
+Creating temporary file "C:\DOCUME~1\obobbyo\LOCALS~1\Temp\RSP567.tmp" with contents
+[
+/nologo /o"Release/rtree.bsc" 
+".\Release\blk_file.sbr"
+".\Release\cache.sbr"
+".\Release\distance.sbr"
+".\Release\entry.sbr"
+".\Release\functions.sbr"
+".\Release\heap.sbr"
+".\Release\histogram.sbr"
+".\Release\linlist.sbr"
+".\Release\main.sbr"
+".\Release\rtnode.sbr"
+".\Release\rtree.sbr"
+".\Release\rtree_cmd.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\obobbyo\LOCALS~1\Temp\RSP567.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+rtree.exe - 0 error(s), 18 warning(s)
+</pre>
+</body>
+</html>
