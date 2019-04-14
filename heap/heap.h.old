@@ -1,0 +1,80 @@
+/* this file contains implementation of the class Heap */
+#ifndef HEAP_H
+#define HEAP_H
+
+enum MODE {BF, DF, HB};
+
+class HeapEntry;
+class Heap;
+class Disk;
+
+class HeapEntry
+{
+public:
+	int dim;
+	int level;
+	int son;
+	float *bounces;
+	float key;
+
+	//-----functions-----
+	HeapEntry();
+	~HeapEntry();
+	void init_HeapEntry(int _dim);
+	void copy(HeapEntry *_he);
+};
+
+class Heap
+{
+private: 
+	void enter(HeapEntry *_he, int _pos);
+	void expel(int _pos);
+public:
+	int b;            // needed by HB for access condition
+	int hsize;        // the heap size
+	int used;         // number of used places
+	float thre;       // threshold for heap or disk storage
+	float thre_inc;   // incremental value for threshold
+	Disk *disk;       // simulated disk for memory trashing
+	HeapEntry *cont;  // content of the heap
+	MODE mode;
+
+	//-----functions-----
+	Heap();
+	~Heap();
+	void BFclean(float _dist);
+	void BFinit(int _dim, int _hsize, float _thre, int _psize);
+	void BFinsert(HeapEntry *_he, float _dist);
+	bool BFremove(HeapEntry *_he, float _dist);
+	void DFinit(int _hsize, int _dim);
+	void DFinsert(HeapEntry *_he);
+	bool DFremove(HeapEntry *_he);
+	void HBclean(float _dist);
+	void HBinit(int _hsize, int _b);
+	void HBinsert(HeapEntry *_he);
+	bool HBremove(HeapEntry *_he, float _dist);
+	
+	//---added for validity region
+	void insert(HeapEntry *_he);
+	bool remove(HeapEntry *_he);
+	void resort();
+};
+
+class Disk
+{
+	int DSIZE;        // disk size
+public:
+	int cost;         // cost of page accesses 
+	int psize;        // page size (how many entries in a page)
+	int used;         // number of used places
+	HeapEntry *cont;
+
+	//-----functions-----
+	Disk();
+	~Disk();
+	void init(int _psize, int _dim);
+	void insert(HeapEntry *_he);
+	int remove(HeapEntry *_he, int _size, float _thre);
+};
+
+#endif
